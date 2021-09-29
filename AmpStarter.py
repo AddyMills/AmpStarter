@@ -1,12 +1,6 @@
 from mido import Message, MidiFile, MidiTrack, MetaMessage
 import sys
 
-bass = "bass"
-drums = "drums"
-guitar = "guitar"
-synth = "synth"
-vocals = "vox"
-
 argNum = len(sys.argv)
 
 if argNum != 7:
@@ -14,7 +8,7 @@ if argNum != 7:
         print("Not enough tracks defined! Found only "+str(argNum-1)+". Needs to be 6")
     else:
         print("Too many tracks defined! Found "+str(argNum-1)+", can only process 6.")
-    exit()
+    sys.exit()
 
 mid = MidiFile(type=1)
 mid.add_track()
@@ -30,6 +24,7 @@ class instCount:
 numInst = instCount() #Keep track of instruments. Drums, Bass, Guitar, Synth, Vocals
 
 playable = sys.argv[1:]
+
 #playable = ['drums','drums','drums','drums','drums','drums']
 
 def countInst(inst):
@@ -51,6 +46,10 @@ def countInst(inst):
     return -1
 
 def createTrack(num, inst):
+    if inst == "vocals":
+        inst = 'vox'
+    if inst == 'gtr':
+        inst = 'guitar'
     x = countInst(inst) #Grab number of instruments present
     trackname = "T"+str(num)+" CATCH:"+inst[0].upper()+":"+inst[0].upper()+inst[1:].lower()
     if x > 1:

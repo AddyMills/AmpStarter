@@ -8,10 +8,10 @@
 ## Usage:
  -Run the script (or executable) from within your terminal with 6 arguments.
 	Acceptable arguments:
-		* bass
-		* drums
-		* guitar (or gtr)
-		* synth
-		* vocals (or vox)
+		  * bass
+		  * drums
+		  * guitar (or gtr)
+		  * synth
+		  * vocals (or vox)
 		
 This will create a .mid file in the folder you executed the script from you can use as your starter.

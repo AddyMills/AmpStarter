@@ -6,7 +6,7 @@
  Due to the nature of Amplitude's many possible track combinations and difficult naming conventions, I created this script to give you a starter. It will create 6 MIDI tracks with the proper track names, as well as the extra tracks present in other Amplitude songs (T7 FREESTYLE, BG_CLICK, and WORLD).
  
 ## Usage:
-Run the script (or executable) from within your terminal with 6 arguments for each instrument track.
+Run the script (or executable) from within your terminal with 6 arguments representing each instrument track.
 
 Example: AmpStarter.py drums bass guitar synth vocals drums
 

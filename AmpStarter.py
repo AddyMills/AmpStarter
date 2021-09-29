@@ -1,6 +1,8 @@
 from mido import Message, MidiFile, MidiTrack, MetaMessage
 import sys
 
+#Initial release
+
 argNum = len(sys.argv)
 
 if argNum != 7:
@@ -24,8 +26,6 @@ class instCount:
 numInst = instCount() #Keep track of instruments. Drums, Bass, Guitar, Synth, Vocals
 
 playable = sys.argv[1:]
-
-#playable = ['drums','drums','drums','drums','drums','drums']
 
 def countInst(inst):
     if inst.lower() == 'drums':
